@@ -32,8 +32,12 @@ function initialize() {
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+ var mapOptions = { 
+    zoom: 8, 
+    mapTypeId: google.maps.MapTypeId.ROADMAP 
+};
+var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions); 
+var kmlLayer = new google.maps.KmlLayer("https://maps.google.ca/maps/ms?ie=UTF8&msa=0&output=kml&msid=210000746142049190989.0004ce14b7a8e95167602", { map: map, preserveViewport: true });
   	// try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
