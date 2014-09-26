@@ -11,6 +11,12 @@
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link href="/assets/styles.css" rel="stylesheet">
+
+       <!-- Bootstrap Core CSS -->
+    <link href="/assets/bootstrap1.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/assets/full-slider1.css" rel="stylesheet">
   </head>
 
 
@@ -21,30 +27,67 @@
 <!-- Wrap all page content here -->
 <div id="wrap">
   
+
+
+
+
 <header class="masthead">
-    <div class="container" >
-    <div class="row" >
-      <div class="col-sm-8" ><br><br>
-        <h1><a href="/welcome/index" title="Bootstrap Template">Saima Technologies</a>
-          <!-- <p class="lead">{A Bootstrap Template}</p></h1> -->
-      </div>
+    
+    
+      <div class="col-sm-12 carousel slide" id="myCarousel"><br><br>
 
+        <!-- <h1><a href="/welcome/index" title="Bootstrap Template">Company Profile</a> -->
+      <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-
-      <div class="col-sm-4">
-        <div class="pull-right  hidden-xs">    
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3><i class="glyphicon glyphicon-cog"></i></h3></a>
-          <ul class="dropdown-menu">
-              <li><a href="#section5"><i class="glyphicon glyphicon-chevron-right"></i> Contact Us</a></li>
-              <li><a href="#section3"><i class="glyphicon glyphicon-user"></i>About Us</a></li>
-              <li><a href="#section4"><i class="glyphicon glyphicon-lock"></i>What We Do</a></li>
-             
-          </ul>
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://www.softbunch.com/img/web-application-development2.png');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 1</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
         </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+
       </div>
-    </div>
-    </div>
+
+
+
+    
+  
 </header>
+
+
+
   
   
 <!-- Fixed navbar -->
@@ -79,6 +122,8 @@
     </div><!--/.container -->
 </div><!--/.navbar -->
   
+
+
 <!-- Begin page content -->
 <div class="divider" id="section1"></div>
   
@@ -282,27 +327,17 @@
 
 
 
-<script>
-var myName = "kunal";
 
-var red = [0, 100, 63];
-var orange = [40, 100, 60];
-var green = [75, 100, 40];
-var blue = [196, 77, 55];
-var purple = [280, 50, 60];
-var letterColors = [red, orange, green, blue, purple];
 
-drawName(myName, letterColors);
+<!-- jQuery Version 1.11.0 -->
+    <script src="/assets/jquery1-1.11.0.js"></script>
 
-if(10 < 3)
-{
-    bubbleShape = 'square';
-}
-else
-{
-    bubbleShape = 'circle';
-}
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/bootstrap1.min.js"></script>
 
-bounceBubbles();
-
-</script>
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
